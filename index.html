@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="sobre">
+      <div class="sobre-texto">
+        <h2 class="titulo">
+          Desenvolvedor <span id="text"></span><span class="cursor">|</span>
+        </h2>
+        <p>
+          Sou o Miguel Lima, tenho 24 anos e sou um desenvolvedor front-end em
+          formação, apaixonado em transformar ideias em interfaces bonitas e
+          funcionais. Estou sempre aprendendo novas tecnologias e aprimorando
+          minhas habilidades na área de desenvolvimento web!
+        </p>
+      </div>
+      <div class="sobre-foto-contato">
+        <div class="sobre-foto">
+          <img src="imagens e logos/Foto Profissional.jpeg" alt="Minha foto" />
+        </div>
+        <div class="links-contato">
+          <p>Fale comigo:</p>
+          <a href="https://wa.me/5581991912992" target="_blank">
+            <i class="fab fa-whatsapp"></i> Whatsapp
+          </a>
+          <a href="https://github.com/MigLima" target="_blank">
+            <i class="fab fa-github"></i> Github
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+      <h2>Minhas skills</h2>
+      <div class="icones-skills">
+        <i class="fab fa-html5" title="HTML"></i>
+        <i class="fab fa-css3-alt" title="CSS"></i>
+        <i class="fab fa-js" title="JavaScript"></i>
+      </div>
+    </section>
+
+    <!-- Projetos (Carrossel) -->
+    <section id="projetos" class="projetos">
+      <h2>Meus Projetos</h2>
+      <div class="carrossel">
+        <button class="btn-anterior">&#10094;</button>
+        <div class="slides">
+          <div class="projeto">Projeto 1</div>
+          <div class="projeto">Projeto 2</div>
+          <div class="projeto">Projeto 3</div>
+        </div>
+        <button class="btn-proximo">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2025 Miguel Lima. Todos os direitos reservados.</p>
+      <div class="contatos"></div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
