@@ -1,11 +1,13 @@
-Portfolio Miguel Lima
+- Portfolio Miguel Lima
+  
 Meu portfólio pessoal que apresenta meus projetos, habilidades e informações de contato.
 Construído com HTML, CSS e JavaScript, com foco em front-end moderno e responsivo.
 
-Sobre
+- Sobre
 Sou Miguel Lima, desenvolvedor Front-End em formação, apaixonado por criar interfaces acessíveis, responsivas e com boa experiência para o usuário.
 
-Tecnologias Utilizadas
+- Tecnologias Utilizadas
+
 HTML5
 
 CSS3 (Flexbox, Grid e Design Responsivo)
@@ -18,7 +20,8 @@ Fontes Google Fonts (Lora)
 
 Font Awesome para ícones
 
-Funcionalidades
+- Funcionalidades
+  
 Navegação suave entre seções
 
 Carrossel de projetos com navegação manual e automática
