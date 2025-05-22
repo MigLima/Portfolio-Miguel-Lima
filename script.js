@@ -16,7 +16,7 @@ const avancarAutomaticamente = () => {
   intervalo = setInterval(() => {
     index = (index + 1) % projetos.length;
     mostrarSlide();
-  }, 5000); // 5 segundos
+  }, 9000); // 9 segundos
 };
 
 // Parar o avanço automático ao interagir com os botões
