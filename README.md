@@ -4,6 +4,7 @@ Meu portfólio pessoal que apresenta meus projetos, habilidades e informações 
 Construído com HTML, CSS e JavaScript, com foco em front-end moderno e responsivo.
 
 - Sobre
+  
 Sou Miguel Lima, desenvolvedor Front-End em formação, apaixonado por criar interfaces acessíveis, responsivas e com boa experiência para o usuário.
 
 - Tecnologias Utilizadas
