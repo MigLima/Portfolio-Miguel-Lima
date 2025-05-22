@@ -95,6 +95,28 @@ html {
   margin-top: 5rem;
 }
 
+.sobre-texto ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.sobre-texto ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #d3d3d3;
+}
+
+.sobre-texto ul li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: #ff6347;
+  font-weight: bold;
+}
+
 .cursor {
   font-weight: bold;
   font-size: 1.5rem;
