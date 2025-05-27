@@ -13,11 +13,13 @@ body {
 }
 
 a {
-  color: #ff6347;
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #ffa07a;
+  color: #ff6347;
 }
 
 h1, h2, h3 {
