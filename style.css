@@ -80,7 +80,7 @@ html {
   padding: 8rem 2rem 3rem;
   background-color: #111;
   text-align: center;
-  align-items: flex-start;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -137,15 +137,7 @@ html {
   margin-top: 1.5rem;
 }
 
-/* Foto e Contato na Seção Sobre */
-.sobre-foto-contato {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2rem;
-  gap: 1.5rem;
-}
-
+/* Foto na Seção Sobre */
 .sobre-foto {
   width: 350px;
   height: 350px;
@@ -334,6 +326,70 @@ button:hover {
   display: block;
   text-indent: -9999px;
   cursor: pointer;
+}
+
+/* Seção Contato */
+.contato {
+  padding: 4rem 2rem;
+  background-color: #111;
+  text-align: center;
+}
+
+.contato h2 {
+  color: #ff6347;
+  margin-bottom: 1.5rem;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.formulario-contato input, 
+.formulario-contato textarea {
+width: 100%;
+padding: 0.8rem;
+background-color: #222;
+color: #f5f5f5;
+border: 1px solid #333;
+border-radius: 4px;
+}
+
+.formulario-contato textarea {
+  margin-bottom: 3rem;
+}
+
+.formulario-contato button {
+  position: relative;
+  display: block;
+  width: 150px;
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  margin: 0 auto;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+  background-color: #e5533f;
+}
+
+.github-link a {
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.github-link a:hover {
+  color: #ff6347;
 }
 
 /* Footer */
