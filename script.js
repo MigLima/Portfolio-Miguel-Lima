@@ -65,3 +65,27 @@ function typeWriter() {
 
 // Iniciar a animação
 typeWriter();
+
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelectorAll(".nav-links a");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+  });
+});
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+  }
+});

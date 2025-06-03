@@ -28,22 +28,30 @@ h1, h2, h3 {
 
 /* Navbar */
 .navbar {
-  background-color: #222;
-  color: white;
-  padding: 0.8rem 2em;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 0.8rem 2em;
+  background-color: #222;
+  color: white;
 }
 
 .navbar .logo {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.nav-nome {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f5f5f5;
 }
 
 .nav-links {
@@ -66,6 +74,15 @@ h1, h2, h3 {
 
 .nav-links a:hover {
   color: #8545d1;
+}
+
+@media (max-width: 768px) {
+  .nav-nome {
+    display: block;
+    color: #f5f5f5;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
 }
 
 /* Rolagem Suave */
@@ -439,4 +456,110 @@ border-radius: 4px;
 .footer p {
   margin-top: 1rem;
   font-size: 1rem;
+}
+
+/* Responsividade para telas pequenas (até 768px) */
+@media (max-width: 768px) {
+  .sobre {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 1rem;
+  }
+
+
+.sobre-texto {
+  max-width: 90%;
+  text-align: center;
+}
+
+.sobre-foto {
+  width: 200px;
+  height: 200px;
+}
+
+.nav-links {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.carrossel {
+  width: 100%;
+  height: auto;
+}
+
+.projeto {
+  padding-top: 2rem;
+}
+
+.formulario-contato {
+  width: 90%;
+}
+}
+
+/* Botão hamburguer - estilo */
+.hamburger {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%); 
+  z-index: 20;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #f5f5f5;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Responsividade: ativar o botão e esconder links */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 200px;
+    background-color: #222;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
 }

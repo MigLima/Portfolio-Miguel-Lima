@@ -14,11 +14,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-     <link rel="icon" href="imagens-e-logos/favicon.ico-ml.png" type="image/x-icon">
+     <link rel="icon" href="imagens-e-logos/favicon.ico-ml.png" type="image/png">
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
+      <div class="nav-nome">Miguel Lima</div>
+
+      <button class="hamburger" aria-label="Menu">
+       <span></span>
+       <span></span>
+       <span></span>
+      </button>
+
       <ul class="nav-links">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -39,7 +47,7 @@
 
         <h2 class="subtitulo">Um pouco mais sobre minhas habilidades:</h2>
         <ul>
-          <li> Desenvolvimento de interfaces web responsivas (HMTL5, CSS3);</li>
+          <li> Desenvolvimento de interfaces web responsivas (HTML5, CSS3);</li>
           <li> Estilização moderna com Flexbox, Grid e princípios de Design Responsivo;</li>
           <li> Programação com JavaScript (ES6+) para criação de interatividade;</li>
           <li> Versionamento de código com Git e Github;</li>
@@ -106,5 +114,15 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  hamburger.classList.toggle("active");
+});
+
+          </script>
   </body>
 </html>
