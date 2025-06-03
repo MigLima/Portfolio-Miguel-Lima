@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #ff6347;
+  color: #8545d1;
 }
 
 h1, h2, h3 {
@@ -65,7 +65,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
-  color: #ff6347;
+  color: #8545d1;
 }
 
 /* Rolagem Suave */
@@ -91,7 +91,7 @@ html {
 
 .sobre-texto h2 {
   margin-bottom: 1rem;
-  color: #ff6347;
+  color: #8545d1;
   margin-top: 5rem;
 }
 
@@ -113,14 +113,14 @@ html {
   content: "-";
   position: absolute;
   left: 0;
-  color: #ff6347;
+  color: #5a2293;
   font-weight: bold;
 }
 
 .cursor {
   font-weight: bold;
   font-size: 1.5rem;
-  color: #ff6347;
+  color: #8545d1;
   animation: piscar 0.7s step-start infinite;
 }
 
@@ -143,8 +143,35 @@ html {
   height: 350px;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid #333;
+  border: 4px solid transparent;
+  position: relative;
   margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(133, 69, 209, 0.3);
+}
+
+.sobre-foto::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 6px solid rgba(133, 69, 209, 0.3);
+  animation: pulse-border 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes pulse-border {
+  0%, 100% {
+    border-color: rgba(133, 69, 209, 0.3);
+    box-shadow: 0 0 6px 2px rgba(133, 69, 209, 0.4);
+  }
+  50% {
+    border-color: rgba(133, 69, 209, 0.8);
+    box-shadow: 0 0 12px 4px rgba(133, 69, 209, 0.7);
+
+  }
 }
 
 .sobre-foto img {
@@ -152,6 +179,7 @@ html {
   height: 100%;
   object-fit: cover;
   object-position: center 25%;
+  display: block;
 }
 
 /* Links de Contato */
@@ -167,7 +195,7 @@ html {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #ff6347;
+  color: #8545d1;
 }
 
 .links-contato a {
@@ -184,7 +212,7 @@ html {
 }
 
 .links-contato a:hover {
-  color: #ff6347;
+  color: #8545d1;
 }
 
 /* Seção Skills */
@@ -192,6 +220,10 @@ html {
   padding: 4rem 2rem;
   background-color: #111;
   text-align: center;
+}
+
+.skills h2 {
+  color: #8545d1;
 }
 
 .icones-skills {
@@ -203,7 +235,7 @@ html {
 
 .icones-skills i:hover {
   transform: scale(1.2) rotate(5deg);
-  color: #ff6347;
+  color: #5a2293;
 }
 
 /* Seção Projetos - Carrossel */
@@ -211,6 +243,10 @@ html {
   padding: 4rem 2rem;
   background-color: #111;
   text-align: center;
+}
+
+.projetos h2 {
+  color: #8545d1;
 }
 
 .carrossel {
@@ -279,7 +315,7 @@ button {
 }
 
 button:hover {
-  color: #ff6347;
+  color: #8545d1;
 }
 
 .btn-anterior {
@@ -336,7 +372,7 @@ button:hover {
 }
 
 .contato h2 {
-  color: #ff6347;
+  color: #8545d1;
   margin-bottom: 1.5rem;
 }
 
@@ -369,7 +405,7 @@ border-radius: 4px;
   padding: 0.8rem;
   font-size: 1.3rem;
   margin: 0 auto;
-  background-color: #ff6347;
+  background-color: #8545d1;
   color: white;
   border: none;
   cursor: pointer;
@@ -378,7 +414,7 @@ border-radius: 4px;
 }
 
 .formulario-contato button:hover {
-  background-color: #e5533f;
+  background-color: #5a2293;
 }
 
 .github-link a {
@@ -389,7 +425,7 @@ border-radius: 4px;
 }
 
 .github-link a:hover {
-  color: #ff6347;
+  color: #8545d1;
 }
 
 /* Footer */
