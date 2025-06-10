@@ -34,7 +34,7 @@ h1, h2, h3 {
   left: 0;
   z-index: 10;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2em;
   background-color: #222;
@@ -48,10 +48,10 @@ h1, h2, h3 {
 
 .nav-nome {
   flex: 1;
-  text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
   color: #f5f5f5;
+  margin-right: auto;
 }
 
 .nav-links {
@@ -434,16 +434,42 @@ border-radius: 4px;
   background-color: #5a2293;
 }
 
-.github-link a {
-  color: #f5f5f5;
+/* Seção GitHub & Baixar CV */
+.github-link, 
+.baixar-cv {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.github-link p,
+.baixar-cv p {
+  color: #8545d1;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.github-link a,
+.baixar-cv a {
+  display: inline-flex;
+  align-items: center;
   font-size: 1.2rem;
+  color: #f5f5f5;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.github-link a:hover {
+.github-link a i,
+.baixar-cv a i {
+  margin-right: 0.5rem;
+  color: inherit;
+}
+
+.github-link a:hover,
+.baixar-cv a:hover {
   color: #8545d1;
 }
+
 
 /* Footer */
 .footer {
