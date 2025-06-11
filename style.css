@@ -526,23 +526,15 @@ border-radius: 4px;
   right: 20px;
 }
 
-.projeto {
-  padding-top: 2rem 1.5rem;
-}
-
-.projeto.omnifood {
-  padding: 1rem 2rem 1rem 2rem;
-  min-height: auto;
-}
-
 .conteudo-projeto-omnifood {
-  margin-top: 2rem;
-  padding: 0 1rem;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  margin-top: 5.5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(100% - 5.5rem);
+  height: auto;
 }
 
 .formulario-contato {
