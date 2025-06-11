@@ -13,15 +13,15 @@ const mostrarSlide = () => {
 
 // Função para avançar automaticamente
 const avancarAutomaticamente = () => {
+  if (intervalo) clearInterval(intervalo);
   intervalo = setInterval(() => {
     index = (index + 1) % projetos.length;
     mostrarSlide();
-  }, 9000); // 9 segundos
+  }, 9000); 
 };
 
 // Parar o avanço automático ao interagir com os botões
 const pararAvancoAutomatico = () => {
-  clearInterval(intervalo);
   avancarAutomaticamente();
 };
 
@@ -29,14 +29,14 @@ const pararAvancoAutomatico = () => {
 btnProximo.addEventListener("click", () => {
   index = (index + 1) % projetos.length;
   mostrarSlide();
-  pararAvancoAutomatico(); // Reinicia o intervalo após interação
+  pararAvancoAutomatico();
 });
 
 // Voltar para o slide anterior
 btnAnterior.addEventListener("click", () => {
   index = (index - 1 + projetos.length) % projetos.length;
   mostrarSlide();
-  pararAvancoAutomatico(); // Reinicia o intervalo após interação
+  pararAvancoAutomatico();
 });
 
 // Iniciar o avanço automático ao carregar a página
@@ -45,10 +45,14 @@ avancarAutomaticamente();
 // Lógica da animação de escrita
 const textElement = document.getElementById("text");
 const textToType = "Front-End";
-let typingIndex = 0; // Mudando o nome da variável para evitar conflito
-let deleting = false; // Controla se está apagando ou escrevendo
+let typingIndex = 0;
+let deleting = false;
 
 function typeWriter() {
+  if (!deleting && typingIndex === 0) {
+    textElement.textContent = "";
+  }
+
   if (!deleting && typingIndex < textToType.length) {
     textElement.textContent += textToType.charAt(typingIndex);
     typingIndex++;
@@ -66,7 +70,7 @@ function typeWriter() {
 // Iniciar a animação
 typeWriter();
 
-
+// Menu hamburger
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links a");

@@ -486,6 +486,10 @@ border-radius: 4px;
 
 /* Responsividade para telas pequenas (até 768px) */
 @media (max-width: 768px) {
+  h2 {
+  margin-bottom: 2rem;
+}
+
   .sobre {
     flex-direction: column;
     align-items: center;
@@ -516,6 +520,21 @@ border-radius: 4px;
 
 .projeto {
   padding-top: 2rem;
+}
+
+.projeto.omnifood {
+  padding: 1rem 2rem 1rem 2rem;
+  min-height: auto;
+}
+
+.conteudo-projeto-omnifood {
+  margin-top: 2rem;
+  padding: 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(100% - 5.5rem);
 }
 
 .formulario-contato {
