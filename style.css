@@ -518,8 +518,16 @@ border-radius: 4px;
   height: auto;
 }
 
+.btn-anterior {
+  left: 20px;
+}
+
+.btn-proximo {
+  right: 20px;
+}
+
 .projeto {
-  padding-top: 2rem;
+  padding-top: 2rem 1.5rem;
 }
 
 .projeto.omnifood {
