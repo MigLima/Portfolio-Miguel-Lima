@@ -32,7 +32,7 @@ h1, h2, h3 {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -281,7 +281,7 @@ html {
 
 .slides {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   width: 300%;
   height: 80%;
 }
@@ -290,7 +290,7 @@ html {
   width: 100%;
   flex: 0 0 100%;
   background-color: #222;
-  padding: 0.5rem 2rem 1.5rem;
+  padding: 6rem 2rem 1.5rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   box-sizing: border-box;
@@ -300,7 +300,6 @@ html {
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  padding-top: 6rem;
   height: auto;
   min-height: 300px;
 }
@@ -358,7 +357,7 @@ button:hover {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url(imagens-e-logos/Omnifood-topo.png);
+  background-image: url(../assets/imagens/Omnifood-topo.png);
   background-size: cover;
   background-position: center;
   filter: blur(2px);
@@ -498,7 +497,8 @@ border-radius: 4px;
   }
 
   .sobre-texto {
-    max-width: 90%;
+    max-width: 100%;
+    padding: 0 1rem;
     text-align: center;
   }
 
