@@ -1,0 +1,17 @@
+# Arquivos do sistema operacional (Windows/macOS)
+.DS_Store
+Thumbs.db
+
+# Configurações de editores
+.vscode/
+*.code-workspace
+
+# Logs (por precaução)
+*.log
+
+# Arquivos temporários ou de backup
+*.tmp
+*.bak
+
+# Arquivos do sistema do VS Code
+*.env
