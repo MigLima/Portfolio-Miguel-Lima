@@ -18,6 +18,10 @@
   }
 
   .theme-toggle {
+    display: flex;
+  }
+
+  .theme-toggle {
     width: 45px;
     height: 45px;
     font-size: 1.2rem;
@@ -186,6 +190,10 @@
     margin-bottom: 1rem;
   }
 
+  .theme-toggle {
+    display: flex;
+  }
+
   .sobre {
     flex-direction: column;
     align-items: center;
@@ -307,10 +315,6 @@
 
   .nav-links a {
     font-size: 1.1rem;
-  }
-
-  .theme-toggle {
-    top: 130px;
   }
 
   .sobre {
