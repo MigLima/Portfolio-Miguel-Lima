@@ -1,0 +1,24 @@
+# robots.txt
+
+# Permite todos os buscadores
+User-agent: *
+Allow: /
+
+# Diretivas específicas para Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Diretivas específicas para Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Sitemap
+Sitemap: https://miglimapires.com/sitemap.xml
+
+# Timeout de crawl (em segundos)
+Crawl-delay: 1
+
+# Máximo de requisições por segundo
+Request-rate: 1/1s

@@ -1,0 +1,32 @@
+{
+  "name": "portfolio-miguel-lima",
+  "version": "1.0.0",
+  "description": "Portfólio profissional de Miguel Lima Pires - Desenvolvedor Front-End especializado em HTML5, CSS3 e JavaScript",
+  "private": true,
+  "author": {
+    "name": "Miguel Lima Pires",
+    "email": "miglimapires@gmail.com",
+    "url": "https://github.com/MigLima"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MigLima/Portfolio-Miguel-Lima.git"
+  },
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "developer",
+    "html5",
+    "css3",
+    "javascript",
+    "responsive-design",
+    "web-development"
+  ],
+  "scripts": {
+    "dev": "npx http-server",
+    "build": "echo \"Static site - no build step required\"",
+    "deploy": "See docs/DEPLOYMENT.md for deployment instructions"
+  },
+  "homepage": "https://miglimapires.com"
+}

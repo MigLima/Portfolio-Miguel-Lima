@@ -17,26 +17,21 @@ const avancarAutomaticamente = () => {
   intervalo = setInterval(() => {
     index = (index + 1) % projetos.length;
     mostrarSlide();
-  }, 9000); 
-};
-
-// Parar o avanço automático ao interagir com os botões
-const pararAvancoAutomatico = () => {
-  avancarAutomaticamente();
+  }, 9000);
 };
 
 // Avançar para o próximo slide
 btnProximo.addEventListener("click", () => {
   index = (index + 1) % projetos.length;
   mostrarSlide();
-  pararAvancoAutomatico();
+  avancarAutomaticamente();
 });
 
 // Voltar para o slide anterior
 btnAnterior.addEventListener("click", () => {
   index = (index - 1 + projetos.length) % projetos.length;
   mostrarSlide();
-  pararAvancoAutomatico();
+  avancarAutomaticamente();
 });
 
 // Iniciar o avanço automático ao carregar a página
@@ -80,10 +75,20 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
-links.forEach(link => {
+links.forEach((link) => {
   link.addEventListener("click", () => {
     navLinks.classList.remove("active");
     hamburger.classList.remove("active");
+  });
+});
+
+// Scroll suave para o topo ao clicar no logo
+const logoLink = document.getElementById("logoLink");
+logoLink.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });
 
@@ -92,4 +97,43 @@ window.addEventListener("scroll", () => {
     navLinks.classList.remove("active");
     hamburger.classList.remove("active");
   }
+});
+
+// Links de navegação
+const navLinkElements = document.querySelectorAll(".nav-link");
+navLinkElements.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const target = link.getAttribute("href");
+    const element = document.querySelector(target);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      // Fecha o menu mobile se estiver aberto
+      navLinks.classList.remove("active");
+      hamburger.classList.remove("active");
+    }
+  });
+});
+
+// Theme Toggle - Light/Dark Mode
+const themeToggle = document.getElementById("themeToggle");
+const html = document.documentElement;
+
+// Verificar preferência salva ou preferência do sistema
+const savedTheme = localStorage.getItem("theme");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+const shouldUseLightMode =
+  savedTheme === "light" || (!savedTheme && !prefersDark);
+
+if (shouldUseLightMode) {
+  html.classList.add("light-mode");
+}
+
+// Alternar tema ao clicar
+themeToggle.addEventListener("click", () => {
+  html.classList.toggle("light-mode");
+  localStorage.setItem(
+    "theme",
+    html.classList.contains("light-mode") ? "light" : "dark"
+  );
 });

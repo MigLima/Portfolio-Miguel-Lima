@@ -1,0 +1,462 @@
+/* ========================================
+   RESPONSIVE CSS - Media Queries
+   ======================================== */
+
+/* ===== Responsividade para celulares muito pequenos (até 480px) ===== */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    padding: 0.6rem 1rem;
+    gap: 1rem;
+  }
+
+  .nav-nome {
+    font-size: 1.1rem;
+  }
+
+  .theme-toggle {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    top: 120px;
+    right: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .sobre {
+    padding: 3rem 1rem;
+  }
+
+  .sobre-texto {
+    padding: 0;
+  }
+
+  .sobre-foto {
+    width: 200px;
+    height: 200px;
+  }
+
+  .nav-links {
+    width: 150px;
+    padding-top: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+  }
+
+  .contato-info {
+    gap: 1rem;
+  }
+
+  .info-item {
+    min-height: 150px;
+    width: 150px;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .info-item:active {
+    background-color: rgba(124, 58, 237, 0.15);
+  }
+
+  .info-item i {
+    font-size: 2rem;
+  }
+
+  .pdf-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .info-item p {
+    font-size: 0.9rem;
+  }
+
+  .info-item span {
+    font-size: 0.8rem;
+  }
+
+  .icones-skills {
+    gap: 1.5rem;
+    font-size: 3rem;
+  }
+
+  .skill-item {
+    gap: 0.5rem;
+  }
+
+  .skill-item i {
+    font-size: 3rem;
+  }
+
+  .skill-item p {
+    font-size: 0.85rem;
+  }
+
+  .projeto {
+    padding: 4rem 1rem 1.5rem;
+  }
+
+  .carrossel {
+    height: 350px;
+    width: 100%;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .conteudo-projeto-omnifood {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .conteudo-projeto-omnifood h3 {
+    font-size: 1.2rem;
+  }
+
+  .conteudo-projeto-omnifood p {
+    font-size: 0.9rem;
+  }
+
+  .formulario-contato button {
+    width: 120px;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+
+  .formulario-contato input,
+  .formulario-contato textarea {
+    padding: 0.6rem;
+    font-size: 16px; /* Evita zoom em inputs em iOS */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-section h4 {
+    font-size: 0.9rem;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-links a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
+/* ===== Responsividade para telas pequenas (até 768px) ===== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .sobre {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 1rem;
+  }
+
+  .sobre-texto {
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .sobre-foto {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 200px;
+    background-color: var(--color-bg-secondary);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: var(--z-nav-mobile);
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 0;
+  }
+
+  .carrossel {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-anterior {
+    left: 10px;
+  }
+
+  .btn-proximo {
+    right: 10px;
+  }
+
+  .conteudo-projeto-omnifood {
+    padding: 1.5rem;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    position: relative;
+  }
+
+  .formulario-contato {
+    width: 90%;
+  }
+
+  .contato-info {
+    gap: 1.5rem;
+  }
+
+  .info-item {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .icones-skills {
+    gap: 2rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===== Responsividade para tablets (768px a 1024px) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav-nome {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  .theme-toggle {
+    top: 130px;
+  }
+
+  .sobre {
+    padding: 6rem 1.5rem;
+  }
+
+  .titulo {
+    font-size: 2.2rem;
+  }
+
+  .sobre-foto {
+    width: 300px;
+    height: 300px;
+  }
+
+  .contato-info {
+    gap: 2rem;
+  }
+
+  .info-item {
+    width: 180px;
+  }
+
+  .icones-skills {
+    gap: 3rem;
+  }
+
+  .carrossel {
+    width: 90%;
+    height: 450px;
+  }
+
+  .formulario-contato {
+    max-width: 450px;
+  }
+}
+
+/* ===== Responsividade para desktop grande (> 1440px) ===== */
+@media (min-width: 1441px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .sobre {
+    padding: 8rem 3rem;
+  }
+
+  .projetos,
+  .skills,
+  .contato {
+    padding: 8rem 3rem;
+  }
+
+  .carrossel {
+    max-width: 900px;
+  }
+
+  .formulario-contato {
+    max-width: 600px;
+  }
+}
+
+/* ===== Otimizações para Touch Devices ===== */
+@media (hover: none) and (pointer: coarse) {
+  .info-item,
+  .skill-item,
+  .social-links a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-links a {
+    padding: 1rem 0;
+  }
+
+  .info-item {
+    padding: 1.2rem;
+  }
+}
+
+/* ===== Prefers Reduced Motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== Dark Mode Preference ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #111;
+    --color-bg-secondary: #222;
+    --color-text-primary: #e8e8e8;
+    --color-text-secondary: #f5f5f5;
+  }
+}
+
+/* ===== High Contrast ===== */
+@media (prefers-contrast: more) {
+  :root {
+    --color-accent: #5a00b0;
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  button,
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* ===== Print ===== */
+@media print {
+  .navbar,
+  .footer,
+  .hamburger {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  a {
+    color: blue;
+    text-decoration: underline;
+  }
+
+  main {
+    margin-top: 0;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
