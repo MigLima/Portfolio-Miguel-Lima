@@ -4,19 +4,21 @@
 
 /* ===== Navbar ===== */
 .navbar {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 2rem;
+  align-items: center !important;
+  padding: 0.3rem 2rem !important;
   background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
-  gap: 2rem;
+  gap: 0.5rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: visible !important;
+  min-height: 45px !important;
 }
 
 .navbar .logo {
@@ -45,24 +47,35 @@
   outline: none;
 }
 
+/* ===== Navbar Right Controls ===== */
+.navbar-controls {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  overflow: visible !important;
+}
+
 /* ===== Theme Toggle ===== */
 .theme-toggle {
   position: relative;
   background-color: var(--color-accent);
   border: none;
   color: white;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
-  margin: 0 0.5rem;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .theme-toggle:hover {
@@ -78,6 +91,17 @@ html.light-mode .theme-toggle {
 html.light-mode .theme-toggle:hover {
   background-color: #6d28d9;
   color: white;
+}
+
+/* Desktop: Hide theme toggle and hamburger */
+@media (min-width: 769px) {
+  .theme-toggle {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
 }
 
 .theme-toggle i {
@@ -288,20 +312,19 @@ html.light-mode .formulario-contato button:hover {
 
 /* ===== Hamburger Menu ===== */
 .hamburger {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+  position: relative;
   z-index: var(--z-hamburger);
-  display: none;
+  display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .hamburger span {
@@ -311,6 +334,7 @@ html.light-mode .formulario-contato button:hover {
   border-radius: 2px;
   transition: all var(--transition-normal);
   transform-origin: 1px;
+  margin: 3px 0;
 }
 
 .hamburger.active span:nth-child(1) {
