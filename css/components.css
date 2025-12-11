@@ -4,21 +4,21 @@
 
 /* ===== Navbar ===== */
 .navbar {
-  position: fixed !important;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  display: flex !important;
+  display: flex;
   justify-content: space-between;
-  align-items: center !important;
-  padding: 0.3rem 2rem !important;
+  align-items: flex-start;
+  padding: 1.5rem 2rem;
   background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
-  gap: 0.5rem;
+  gap: 1rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  overflow: visible !important;
-  min-height: 45px !important;
+  overflow: visible;
+  min-height: 45px;
 }
 
 .navbar .logo {
@@ -49,11 +49,12 @@
 
 /* ===== Navbar Right Controls ===== */
 .navbar-controls {
-  display: flex !important;
-  align-items: center !important;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
-  gap: 0.3rem;
-  overflow: visible !important;
+  gap: 2rem;
+  overflow: visible;
+  margin-top: 1rem;
 }
 
 /* ===== Theme Toggle ===== */
@@ -62,8 +63,9 @@
   background-color: var(--color-accent);
   border: none;
   color: white;
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
+  line-height: 1;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -71,7 +73,7 @@
   align-items: center;
   justify-content: center;
   z-index: 100;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
   margin: 0;
   padding: 0;
@@ -106,6 +108,8 @@ html.light-mode .theme-toggle:hover {
 
 .theme-toggle i {
   transition: transform 0.3s ease;
+  color: #fff;
+  font-weight: bold;
 }
 
 html.light-mode .theme-toggle i::before {
@@ -146,7 +150,14 @@ main {
   margin-top: 70px;
 }
 
-/* ===== Hamburger Menu ===== */
+/* ===== Form Inputs ===== */
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 .formulario-contato input,
 .formulario-contato textarea {
@@ -156,7 +167,7 @@ main {
   color: var(--color-text-secondary);
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sans);
   transition: all 0.3s ease;
 }
 
@@ -172,6 +183,10 @@ main {
   -webkit-box-shadow: 0 0 0px 1000px var(--color-bg-secondary) inset !important;
   -webkit-text-fill-color: var(--color-text-secondary) !important;
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.formulario-contato textarea {
+  margin-bottom: 3rem;
 }
 
 .formulario-contato button {
@@ -193,15 +208,6 @@ main {
 .formulario-contato button:hover {
   background-color: #6d28d9;
   animation: glow 0.6s ease-in-out infinite;
-}
-
-html.light-mode .formulario-contato button {
-  background-color: var(--color-accent);
-  color: white;
-}
-
-html.light-mode .formulario-contato button:hover {
-  background-color: #6d28d9;
 }
 
 @keyframes glow {
@@ -314,11 +320,12 @@ html.light-mode .formulario-contato button:hover {
 .hamburger {
   position: relative;
   z-index: var(--z-hamburger);
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
-  width: 35px;
-  height: 35px;
+  width: 28px;
+  height: 28px;
+  line-height: 1;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -517,108 +524,4 @@ html.light-mode button:hover {
 .formulario-contato button:hover {
   background-color: var(--color-accent-hover);
   animation: glow 0.6s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.2);
-  }
-  100% {
-    filter: brightness(1);
-  }
-}
-
-/* ===== Footer ===== */
-.footer {
-  background-color: var(--color-bg-tertiary);
-  color: var(--color-text-primary);
-  padding: 3rem 2rem 1rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto 2rem;
-  text-align: center;
-}
-
-.footer-section h3 {
-  font-size: 1.3rem;
-  color: var(--color-text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.footer-section h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-text-primary);
-  margin-bottom: 1rem;
-}
-
-.footer-section p {
-  margin: 0;
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-}
-
-.social-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: var(--color-accent-alpha);
-  color: var(--color-accent);
-  transition: all var(--transition-normal);
-  font-size: 1.2rem;
-}
-
-.social-links a:hover {
-  background-color: var(--color-accent);
-  color: white;
-  transform: translateY(-3px);
-}
-
-.footer-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.footer-links a {
-  color: var(--color-text-muted);
-  transition: color var(--transition-normal);
-  font-size: 0.95rem;
-}
-
-.footer-links a:hover {
-  color: var(--color-accent);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
-  color: var(--color-text-disabled);
-  font-size: 0.85rem;
-}
-
-.footer-bottom p {
-  margin: 0;
 }

@@ -9,21 +9,21 @@
   }
 
   .navbar {
-    padding: 0.2rem 1rem;
+    padding: 1.2rem 1.2rem;
     gap: 0.5rem;
-    min-height: 40px;
+    height: 70px !important;
   }
 
   .navbar-controls {
-    gap: 0.5rem;
+    gap: 1.5rem;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .nav-nome {
     font-size: 1.1rem;
-  }
-
-  .theme-toggle {
-    display: flex;
   }
 
   h1 {
@@ -52,15 +52,27 @@
   }
 
   .nav-links {
-    width: 150px;
-    padding-top: 1rem;
-    gap: 1rem;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 200px;
+    background-color: var(--color-bg-secondary);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    gap: 1.5rem;
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: var(--z-nav-mobile);
   }
 
-  .nav-links a {
-    font-size: 1rem;
-    padding: 0.8rem 0;
+  .nav-links.active {
+    transform: translateX(0);
   }
+
+  .nav-links li {
 
   .contato-info {
     gap: 1rem;
@@ -187,10 +199,6 @@
     margin-bottom: 1rem;
   }
 
-  .theme-toggle {
-    display: flex;
-  }
-
   .sobre {
     flex-direction: column;
     align-items: center;
@@ -299,7 +307,7 @@
 /* ===== Responsividade para tablets (768px a 1024px) ===== */
 @media (min-width: 769px) and (max-width: 1024px) {
   .navbar {
-    padding: 0.8rem 1.5rem;
+    padding: 1.2rem 1.5rem;
   }
 
   .nav-nome {
@@ -352,7 +360,7 @@
 /* ===== Responsividade para desktop grande (> 1440px) ===== */
 @media (min-width: 1441px) {
   .navbar {
-    padding: 1rem 3rem;
+    padding: 1.2rem 3rem;
   }
 
   .sobre {
