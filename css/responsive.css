@@ -22,6 +22,42 @@
     display: flex;
   }
 
+  .theme-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-text-secondary);
+    color: #1a1a1a;
+  }
+
+  .theme-toggle:hover {
+    background-color: #d9d9d9;
+  }
+
+  .theme-toggle i {
+    color: #1a1a1a;
+  }
+
+  html.light-mode .theme-toggle {
+    background-color: var(--color-text-secondary);
+    color: white;
+  }
+
+  html.light-mode .theme-toggle:hover {
+    background-color: #333333;
+    color: white;
+  }
+
+  html.light-mode .theme-toggle i {
+    color: white;
+  }
+
   .nav-nome {
     font-size: 1.1rem;
   }
@@ -113,6 +149,9 @@
 
   .skill-item {
     gap: 0.5rem;
+    width: 90px;
+    height: 110px;
+    justify-content: center;
   }
 
   .skill-item i {
@@ -123,8 +162,17 @@
     font-size: 0.85rem;
   }
 
+  .projetos {
+    padding: 2rem 0.8rem;
+  }
+
   .projeto {
     padding: 4rem 1rem 1.5rem;
+  }
+
+  .btn-anterior,
+  .btn-proximo {
+    display: none;
   }
 
   .carrossel {
@@ -132,13 +180,20 @@
     width: 100%;
   }
 
+  html.light-mode .carrossel {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+  }
+
   button {
     font-size: 1.5rem;
   }
 
   .conteudo-projeto-omnifood {
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin-top: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
   }
 
   .conteudo-projeto-omnifood h3 {
@@ -221,6 +276,42 @@
     display: flex;
   }
 
+  .theme-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-text-secondary);
+    color: #1a1a1a;
+  }
+
+  .theme-toggle:hover {
+    background-color: #d9d9d9;
+  }
+
+  .theme-toggle i {
+    color: #1a1a1a;
+  }
+
+  html.light-mode .theme-toggle {
+    background-color: var(--color-text-secondary);
+    color: white;
+  }
+
+  html.light-mode .theme-toggle:hover {
+    background-color: #333333;
+    color: white;
+  }
+
+  html.light-mode .theme-toggle i {
+    color: white;
+  }
+
   .nav-links {
     position: fixed;
     top: 60px;
@@ -246,30 +337,40 @@
     margin: 0;
   }
 
+  .projetos {
+    padding: 2rem 0.8rem;
+  }
+
   .carrossel {
     width: 100%;
     height: auto;
   }
 
-  .btn-anterior {
-    left: 10px;
+  html.light-mode .carrossel {
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
   }
 
+  .btn-anterior,
   .btn-proximo {
-    right: 10px;
+    display: none;
+  }
+
+  .projeto {
+    padding: 4rem 1.2rem 1.5rem;
   }
 
   .conteudo-projeto-omnifood {
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     margin-top: 4rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: auto;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     z-index: 1;
     position: relative;
   }
@@ -293,6 +394,12 @@
 
   .icones-skills {
     gap: 2rem;
+  }
+
+  .skill-item {
+    width: 110px;
+    height: 130px;
+    justify-content: center;
   }
 
   .sobre-texto p {

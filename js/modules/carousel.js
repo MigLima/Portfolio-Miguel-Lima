@@ -11,6 +11,8 @@ export const Carousel = {
     index: 0,
     intervalo: null,
     autoPlayInterval: 9000,
+    touchStartX: 0,
+    touchEndX: 0,
   },
 
   /**
@@ -63,7 +65,40 @@ export const Carousel = {
    * Configura os event listeners
    */
   setupEventListeners() {
-    this.state.btnProximo.addEventListener("click", () => this.next());
-    this.state.btnAnterior.addEventListener("click", () => this.prev());
+    // Botões de navegação (desktop)
+    if (this.state.btnProximo) {
+      this.state.btnProximo.addEventListener("click", () => this.next());
+    }
+    if (this.state.btnAnterior) {
+      this.state.btnAnterior.addEventListener("click", () => this.prev());
+    }
+
+    // Touch events para swipe (mobile)
+    this.state.slides.addEventListener("touchstart", (e) => {
+      this.state.touchStartX = e.changedTouches[0].screenX;
+    });
+
+    this.state.slides.addEventListener("touchend", (e) => {
+      this.state.touchEndX = e.changedTouches[0].screenX;
+      this.handleSwipe();
+    });
+  },
+
+  /**
+   * Detecta a direção do swipe
+   */
+  handleSwipe() {
+    const swipeThreshold = 50; // Mínimo de pixels para considerar um swipe
+    const diff = this.state.touchStartX - this.state.touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // Swipe para esquerda - próximo slide
+        this.next();
+      } else {
+        // Swipe para direita - slide anterior
+        this.prev();
+      }
+    }
   },
 };
