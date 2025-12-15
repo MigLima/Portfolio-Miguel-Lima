@@ -14,6 +14,8 @@ const html = document.documentElement;
 // ===== Carousel Variables =====
 let index = 0;
 let intervalo;
+let touchStartX = 0;
+let touchEndX = 0;
 
 // ===== Carousel Functions =====
 const mostrarSlide = () => {
@@ -28,6 +30,26 @@ const avancarAutomaticamente = () => {
   }, 9000);
 };
 
+/**
+ * Detecta a direção do swipe no mobile
+ */
+const handleSwipe = () => {
+  const swipeThreshold = 50; // Mínimo de pixels para considerar um swipe
+  const diff = touchStartX - touchEndX;
+
+  if (Math.abs(diff) > swipeThreshold) {
+    if (diff > 0) {
+      // Swipe para esquerda - próximo slide
+      index = (index + 1) % projetos.length;
+    } else {
+      // Swipe para direita - slide anterior
+      index = (index - 1 + projetos.length) % projetos.length;
+    }
+    mostrarSlide();
+    avancarAutomaticamente();
+  }
+};
+
 // ===== Carousel Events =====
 btnProximo.addEventListener("click", () => {
   index = (index + 1) % projetos.length;
@@ -39,6 +61,16 @@ btnAnterior.addEventListener("click", () => {
   index = (index - 1 + projetos.length) % projetos.length;
   mostrarSlide();
   avancarAutomaticamente();
+});
+
+// ===== Touch Events para Swipe (Mobile) =====
+slides.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+});
+
+slides.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  handleSwipe();
 });
 
 avancarAutomaticamente();
